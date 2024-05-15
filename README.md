@@ -4,8 +4,9 @@ A mechanism provided by various libraries that allows your application to monito
 # How to RUN this project
 
 First you need to fork and clone this repo
-
+```
 git clone https://github.com/username/my-project.git my-custom-directory
+```
 
 
 
