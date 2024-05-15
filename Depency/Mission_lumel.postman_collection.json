@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "d7a5b210-90b1-487f-81b1-3211251b775b",
+		"name": "Mission_lumel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30299767"
+	},
+	"item": [
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "config",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"monitor_interval\": \"15\", // seconds\r\n    \"magic_string\": \"hello world\",\r\n    \"monitor_directory\": \"D:/Assessment/lumel/frontend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/dev/saveConfig",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"dev",
+								"saveConfig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monitor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/dev/monitor?directory=D:/Assessment/lumel/frontend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"dev",
+								"monitor"
+							],
+							"query": [
+								{
+									"key": "directory",
+									"value": "D:/Assessment/lumel/frontend"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dirWatcher",
+			"item": [
+				{
+					"name": "createFileDir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"directory\":\"D:/Assessment/lumel/frontend\",\r\n    \"fileName\":\"hloo.txt\",\r\n    \"text\":\"Inforiver has allowed us to move all reporting into Power BI. The combination of beautifully formatted Inforiver matrixes with other interactive visuals has been described as pure magic by both our finance departments and business managers. Our Analytics Team has, early on, noticed the benefits of controllers being able to build financial reports themselves\\\", something which was impossible with our previous solution.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/dev/createDir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"dev",
+								"createDir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
